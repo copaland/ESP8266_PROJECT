@@ -1,0 +1,105 @@
+<!-- KIMSON CORP.
+	type="company" 
+     block="block/esp8266kiki.js"
+	 generator="generator/esp8266kiki.js" 
+	 language="language/esp8266kiki" 
+	 -->
+
+type="company" 
+block="block/esp8266kiki.js"
+generator="generator/esp8266kiki.js" 
+language="language/esp8266kiki" 
+media="media/" 	 
+<script type="text/javascript" src="../../blocks/company/esp8266kiki.js"></script>
+<script type="text/javascript" src="../../generators/arduino/company/esp8266kiki.js"></script>
+<!--引用所有写好的模块-->
+<category name="ESP8266KIKI" colour="100">
+	<block type="esp8266kiki_begin">
+		<value name="ssid">
+			<shadow type="text">
+				<field name="TEXT">wifiname</field>
+			</shadow>
+		</value>
+		<value name="password">
+			<shadow type="text">
+				<field name="TEXT">12345678</field>
+			</shadow>
+		</value>
+	</block>
+	<block type="esp8266kiki_local_ip"></block>
+	<block type="esp8266kiki_client_connect_host">
+		<value name="PORT">
+          <shadow type="math_number">
+            <field name="NUM">80</field>
+          </shadow>
+        </value>
+	</block>
+	<block type="esp8266kiki_client_connected"></block>
+	<block type="esp8266kiki_client_available"></block>
+	<block type="esp8266kiki_client_read"></block>
+	<block type="esp8266kiki_client_print">
+		<value name="TEXT">
+			<shadow type="text">
+				<field name="TEXT"></field>
+			</shadow>
+		</value>
+	</block>
+	<block type="esp8266kiki_client_println">
+		<value name="TEXT">
+			<shadow type="text">
+				<field name="TEXT"></field>
+			</shadow>
+		</value>
+	</block>
+	<block type="esp8266kiki_server_handleClient"></block>
+<!--
+	<block type="sd_card_root_files"> </block>
+
+   <block type="esp8266kiki_motor">
+    <value name="PIN1">
+      <shadow type="pins_digital">
+        <field name="PIN">14</field>
+      </shadow>
+    </value>
+
+    <value name="PIN_EN">
+      <shadow type="pins_pwm">
+        <field name="PIN">12</field>
+      </shadow>
+    </value>
+    <value name="speed">
+      <shadow type="math_number">
+        <field name="NUM">990</field>
+      </shadow>
+    </value>
+  </block>	
+
+	<block type="esp8266kiki_ap_or_sta">
+	  <value name="SSID">
+	   	<shadow type="text">
+	    	<field name="TEXT">WIFI-SSID</field>
+	   	</shadow>
+	  </value>
+	  <value name="PSK">
+	   	<shadow type="text">
+	    	<field name="TEXT">WIFI-PASS</field>
+	    </shadow>
+	  </value>
+	  <value name="IP">
+	 	<shadow type="math_number">
+	  		<field name="NUM">192.168.4.1</field>
+		</shadow>
+	  </value>
+	  </value>
+	  <value name="SUBNET">
+	 	<shadow type="math_number">
+	  		<field name="NUM">255.255.255.0</field>
+		</shadow>
+	  </value>
+	  <value name="PORTNUM">
+	 	<shadow type="math_number">
+	  		<field name="NUM">8080</field>
+		</shadow>
+	  </value>
+	</block> -->	
+</category>
